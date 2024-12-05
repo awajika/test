@@ -28,7 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Deploy
         run: |
-         # SSH接続して、git pullする
          echo "${{ secrets.PRIVATE_KEY }}" > private_key
          chmod 600 private_key
          ssh -oStrictHostKeyChecking=no ${{ secrets.USER_NAME }}@${{ secrets.HOST_NAME }} -i private_key "cd /root/test && git fetch github:awajika/test.git && git pull github:awajika/test.git"

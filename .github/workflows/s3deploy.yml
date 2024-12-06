@@ -1,4 +1,4 @@
-name: Auto Deploy
+name: S3 auto deploy
 
 on:
   push:
